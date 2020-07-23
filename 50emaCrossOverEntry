@@ -1,0 +1,14 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © JakeAndyy
+
+//@version=4
+study('50emaCrossOverEntry', 'Bullish entry indicator when the green arrow appears', overlay = true)
+ema50 = ema(close, 50)
+plot(ema50)
+
+priorDayBelowEma = close[1] < ema50 and open[1] < ema50
+priorDayAboveEma = close[1] > ema50 and open[1] > ema50
+
+entryGoBullish = priorDayBelowEma and close >= ema50
+
+plotshape(entryGoBullish, style = shape.triangleup,  location = location.belowbar,  color = color.green)

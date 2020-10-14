@@ -11,4 +11,4 @@ priorDayAboveEma = close[1] > ema50 and open[1] > ema50
 
 entryGoBullish = priorDayBelowEma and close >= ema50
 
-plotshape(entryGoBullish, style = shape.triangleup,  location = location.belowbar,  color = color.green) // small comment change, check
+plotshape(entryGoBullish, style = shape.triangleup,  location = location.belowbar,  color = color.green) // getting familiar with GIT again
